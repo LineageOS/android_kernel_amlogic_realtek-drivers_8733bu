@@ -2781,9 +2781,11 @@ static void hw_var_detect_rxff_hang(PADAPTER padapter)
 		psrtpriv->self_dect_case = 2;
 		psrtpriv->self_dect_rx_cnt++;
 		RTW_ERR("RXFF maybe hang, trigger silent reset to recover\n");
+		/*
 		mac_reg_dump(RTW_DBGDUMP, padapter);
 		bb_reg_dump(RTW_DBGDUMP, padapter);
 		rf_reg_dump(RTW_DBGDUMP, padapter);
+		*/
 		rtw_hal_sreset_reset(padapter);
 	}
 }
